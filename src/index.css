@@ -265,7 +265,6 @@ img {
 .theme-toggle:hover {
   background: var(--heading);
   color: var(--bg);
-
   border-color: var(--heading);
 
   transform: rotate(12deg);
@@ -297,7 +296,6 @@ img {
 .nav-contact:hover {
   background: var(--button-bg);
   color: var(--button-text);
-
   border-color: var(--button-bg);
 
   transform: translateY(-2px);
@@ -349,7 +347,6 @@ img {
 .mobile-menu-button:hover {
   background: var(--button-bg);
   color: var(--button-text);
-
   border-color: var(--button-bg);
 }
 
@@ -377,6 +374,7 @@ img {
   position: relative;
 
   min-height: 100vh;
+
   max-width: 1200px;
 
   margin: 0 auto;
@@ -431,6 +429,7 @@ img {
   font-size: clamp(4rem, 8vw, 7.5rem);
 
   line-height: 0.92;
+
   font-weight: 600;
 
   letter-spacing: -0.07em;
@@ -450,6 +449,7 @@ img {
   color: var(--muted);
 
   font-size: 1.05rem;
+
   line-height: 1.8;
 }
 
@@ -546,6 +546,7 @@ img {
   inset: 0;
 
   z-index: 2;
+
   pointer-events: none;
 
   background:
@@ -560,6 +561,7 @@ img {
   inset: 0;
 
   z-index: 3;
+
   pointer-events: none;
 
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08));
@@ -594,6 +596,7 @@ body.light-mode .hero-photo-frame img {
 
 .hero:hover .hero-photo-frame img {
   transform: scale(1.025);
+
   opacity: 1;
 }
 
@@ -646,6 +649,7 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.7rem;
 
   text-transform: uppercase;
+
   letter-spacing: 0.15em;
 }
 
@@ -680,6 +684,7 @@ body.light-mode .hero-photo-frame img {
 
 .section-container {
   width: 100%;
+
   max-width: 1200px;
 
   margin: 0 auto;
@@ -716,6 +721,7 @@ body.light-mode .hero-photo-frame img {
   font-size: clamp(3rem, 5vw, 5rem);
 
   line-height: 1;
+
   font-weight: 600;
 
   letter-spacing: -0.06em;
@@ -737,6 +743,7 @@ body.light-mode .hero-photo-frame img {
   color: var(--muted);
 
   font-size: 1rem;
+
   line-height: 1.9;
 }
 
@@ -746,6 +753,7 @@ body.light-mode .hero-photo-frame img {
   color: var(--text);
 
   font-size: 1.2rem;
+
   line-height: 1.7;
 }
 
@@ -761,6 +769,7 @@ body.light-mode .hero-photo-frame img {
   gap: 24px;
 
   margin-top: 55px;
+
   padding-top: 28px;
 
   border-top: 1px solid var(--border);
@@ -768,6 +777,7 @@ body.light-mode .hero-photo-frame img {
 
 .about-details div {
   display: flex;
+
   flex-direction: column;
 
   gap: 8px;
@@ -779,6 +789,7 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.7rem;
 
   text-transform: uppercase;
+
   letter-spacing: 0.12em;
 }
 
@@ -786,6 +797,7 @@ body.light-mode .hero-photo-frame img {
   color: var(--text);
 
   font-size: 0.8rem;
+
   font-weight: 500;
 }
 
@@ -813,6 +825,7 @@ body.light-mode .hero-photo-frame img {
   font-size: clamp(3rem, 5vw, 5rem);
 
   line-height: 1;
+
   font-weight: 600;
 
   letter-spacing: -0.06em;
@@ -830,6 +843,7 @@ body.light-mode .hero-photo-frame img {
   color: var(--muted);
 
   font-size: 1rem;
+
   line-height: 1.9;
 }
 
@@ -839,6 +853,7 @@ body.light-mode .hero-photo-frame img {
 
 .projects-list {
   display: flex;
+
   flex-direction: column;
 
   gap: 18px;
@@ -856,6 +871,7 @@ body.light-mode .hero-photo-frame img {
   background: var(--card);
 
   display: flex;
+
   flex-direction: column;
 
   justify-content: space-between;
@@ -912,7 +928,9 @@ body.light-mode .hero-photo-frame img {
   z-index: 1;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   gap: 20px;
@@ -932,6 +950,7 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.7rem;
 
   text-transform: uppercase;
+
   letter-spacing: 0.12em;
 }
 
@@ -945,6 +964,7 @@ body.light-mode .hero-photo-frame img {
   z-index: 1;
 
   display: flex;
+
   flex-direction: column;
 
   gap: 20px;
@@ -956,6 +976,7 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.7rem;
 
   text-transform: uppercase;
+
   letter-spacing: 0.15em;
 }
 
@@ -983,6 +1004,7 @@ body.light-mode .hero-photo-frame img {
   color: var(--muted);
 
   font-size: 0.95rem;
+
   line-height: 1.8;
 }
 
@@ -996,7 +1018,9 @@ body.light-mode .hero-photo-frame img {
   z-index: 1;
 
   display: flex;
+
   align-items: flex-end;
+
   justify-content: space-between;
 
   gap: 20px;
@@ -1010,6 +1034,7 @@ body.light-mode .hero-photo-frame img {
 
 .project-tech {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 8px;
@@ -1019,6 +1044,7 @@ body.light-mode .hero-photo-frame img {
   padding: 7px 11px;
 
   border: 1px solid var(--border);
+
   border-radius: 100px;
 
   color: var(--muted);
@@ -1050,13 +1076,16 @@ body.light-mode .hero-photo-frame img {
   height: 48px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   border: 1px solid var(--border-strong);
+
   border-radius: 50%;
 
   background: transparent;
+
   color: var(--heading);
 
   font-size: 1.2rem;
@@ -1087,9 +1116,11 @@ body.light-mode .hero-photo-frame img {
   margin-top: 40px;
 
   width: 100%;
+
   min-height: 420px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -1138,6 +1169,7 @@ body.light-mode .hero-photo-frame img {
   z-index: 2;
 
   width: calc(100% - 80px);
+
   max-width: 850px;
 
   border: 1px solid var(--border-strong);
@@ -1192,6 +1224,7 @@ body.light-mode .hero-photo-frame img {
 
 .browser-dots {
   display: flex;
+
   align-items: center;
 
   gap: 6px;
@@ -1226,6 +1259,7 @@ body.light-mode .hero-photo-frame img {
   overflow: hidden;
 
   white-space: nowrap;
+
   text-overflow: ellipsis;
 }
 
@@ -1242,118 +1276,37 @@ body.light-mode .hero-photo-frame img {
 ========================================================= */
 
 .browser-content {
+  width: 100%;
+
   min-height: 370px;
 
-  padding: 30px;
+  padding: 0;
 
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 50%), #0a0a0a;
+  background: #0a0a0a;
+
+  overflow: hidden;
 }
 
 /* =========================================================
-   PESDO PREVIEW
+   PESDO SCREENSHOT
+   Image dimensions: 1907 x 987
 ========================================================= */
 
-.pesdo-preview {
-  min-height: 310px;
-
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: flex-start;
-
-  padding: 40px;
-
-  border: 1px solid rgba(255, 255, 255, 0.06);
-
-  background:
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(255, 255, 255, 0.07),
-      transparent 40%
-    ),
-    #0f0f0f;
-}
-
-.preview-badge {
-  padding: 7px 12px;
-
-  border: 1px solid rgba(255, 255, 255, 0.15);
-
-  border-radius: 100px;
-
-  color: #aaa;
-
-  font-family: "Space Grotesk", sans-serif;
-
-  font-size: 0.65rem;
-
-  letter-spacing: 0.12em;
-}
-
-.pesdo-preview h4 {
-  max-width: 550px;
-
-  margin-top: 25px;
-
-  font-family: "Space Grotesk", sans-serif;
-
-  font-size: clamp(2rem, 4vw, 3.6rem);
-
-  line-height: 0.98;
-
-  letter-spacing: -0.06em;
-
-  font-weight: 600;
-
-  color: #fff;
-}
-
-.pesdo-preview p {
-  max-width: 450px;
-
-  margin-top: 20px;
-
-  color: #777;
-
-  font-size: 0.8rem;
-
-  line-height: 1.7;
-}
-
-.preview-lines {
-  width: 100%;
-  max-width: 320px;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 8px;
-
-  margin-top: 35px;
-}
-
-.preview-lines span {
+.pesdo-image {
   display: block;
 
-  height: 5px;
-
-  border-radius: 100px;
-
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.preview-lines span:nth-child(1) {
   width: 100%;
-}
+  height: auto;
 
-.preview-lines span:nth-child(2) {
-  width: 75%;
-}
+  max-width: 100%;
 
-.preview-lines span:nth-child(3) {
-  width: 50%;
+  object-fit: contain;
+
+  object-position: top center;
+
+  border: 0;
+
+  vertical-align: middle;
 }
 
 /* =========================================================
@@ -1366,7 +1319,9 @@ body.light-mode .hero-photo-frame img {
   grid-template-columns: repeat(4, 1fr);
 
   border-left: 1px solid var(--border);
+
   border-right: 1px solid var(--border);
+
   border-bottom: 1px solid var(--border);
 }
 
@@ -1374,6 +1329,7 @@ body.light-mode .hero-photo-frame img {
   padding: 22px 24px;
 
   display: flex;
+
   flex-direction: column;
 
   gap: 8px;
@@ -1391,6 +1347,7 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.65rem;
 
   text-transform: uppercase;
+
   letter-spacing: 0.12em;
 }
 
@@ -1398,6 +1355,7 @@ body.light-mode .hero-photo-frame img {
   color: var(--text);
 
   font-size: 0.75rem;
+
   font-weight: 500;
 }
 
@@ -1407,12 +1365,15 @@ body.light-mode .hero-photo-frame img {
 
 .projects-coming {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   gap: 30px;
 
   margin-top: 60px;
+
   padding-top: 25px;
 
   border-top: 1px solid var(--border);
@@ -1486,6 +1447,7 @@ body.light-mode .hero-photo-frame img {
 
 .skills-list {
   display: flex;
+
   flex-direction: column;
 
   border-top: 1px solid var(--border);
@@ -1513,6 +1475,7 @@ body.light-mode .hero-photo-frame img {
 
 .skill-card:hover {
   padding-left: 20px;
+
   padding-right: 20px;
 
   background: var(--card-hover);
@@ -1552,6 +1515,7 @@ body.light-mode .hero-photo-frame img {
 
 .skill-technologies {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 8px;
@@ -1625,6 +1589,7 @@ body.light-mode .hero-photo-frame img {
 
 .certifications-list {
   display: flex;
+
   flex-direction: column;
 
   border-top: 1px solid var(--border);
@@ -1654,6 +1619,7 @@ body.light-mode .hero-photo-frame img {
 
 .certification-card:hover {
   padding-left: 20px;
+
   padding-right: 20px;
 
   background: var(--card-hover);
@@ -1681,7 +1647,9 @@ body.light-mode .hero-photo-frame img {
 
 .certification-top {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   gap: 20px;
@@ -1696,6 +1664,7 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.7rem;
 
   text-transform: uppercase;
+
   letter-spacing: 0.14em;
 }
 
@@ -1769,7 +1738,9 @@ body.light-mode .hero-photo-frame img {
 
 .certification-bottom {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   gap: 30px;
@@ -1783,6 +1754,7 @@ body.light-mode .hero-photo-frame img {
 
 .certification-skills {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 8px;
@@ -1821,6 +1793,7 @@ body.light-mode .hero-photo-frame img {
   flex-shrink: 0;
 
   display: inline-flex;
+
   align-items: center;
 
   gap: 10px;
@@ -1862,12 +1835,15 @@ body.light-mode .hero-photo-frame img {
 
 .certifications-footer {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   gap: 30px;
 
   margin-top: 60px;
+
   padding-top: 25px;
 
   border-top: 1px solid var(--border);
@@ -1947,6 +1923,7 @@ body.light-mode .hero-photo-frame img {
 
 .contact-methods {
   display: flex;
+
   flex-direction: column;
 
   align-items: flex-start;
@@ -1957,6 +1934,7 @@ body.light-mode .hero-photo-frame img {
 .contact-email,
 .contact-phone {
   display: inline-flex;
+
   align-items: center;
 
   gap: 16px;
@@ -1997,6 +1975,7 @@ body.light-mode .hero-photo-frame img {
 
 .social-links {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 10px;
@@ -2006,6 +1985,7 @@ body.light-mode .hero-photo-frame img {
 
 .social-links a {
   display: inline-flex;
+
   align-items: center;
 
   gap: 10px;
@@ -2063,6 +2043,7 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.75rem;
 
   text-transform: uppercase;
+
   letter-spacing: 0.12em;
 
   transition: color 0.3s ease;
@@ -2193,6 +2174,7 @@ body.light-mode .hero-photo-frame img {
     padding: 12px;
 
     display: flex;
+
     flex-direction: column;
 
     gap: 4px;
@@ -2205,6 +2187,7 @@ body.light-mode .hero-photo-frame img {
     -webkit-backdrop-filter: blur(20px);
 
     opacity: 0;
+
     visibility: hidden;
 
     transform: translateY(-10px);
@@ -2408,7 +2391,7 @@ body.light-mode .hero-photo-frame img {
   ======================================================= */
 
   .project-visual {
-    min-height: 350px;
+    min-height: auto;
 
     margin-top: 30px;
   }
@@ -2424,19 +2407,17 @@ body.light-mode .hero-photo-frame img {
   }
 
   .browser-content {
-    min-height: 300px;
+    min-height: 0;
 
-    padding: 18px;
+    padding: 0;
   }
 
-  .pesdo-preview {
-    min-height: 260px;
+  .pesdo-image {
+    width: 100%;
 
-    padding: 25px;
-  }
+    height: auto;
 
-  .pesdo-preview h4 {
-    font-size: clamp(2rem, 10vw, 3rem);
+    object-fit: contain;
   }
 
   /* =======================================================
@@ -2487,6 +2468,7 @@ body.light-mode .hero-photo-frame img {
 
   .skill-card:hover {
     padding-left: 10px;
+
     padding-right: 10px;
   }
 
@@ -2530,6 +2512,7 @@ body.light-mode .hero-photo-frame img {
 
   .certification-card:hover {
     padding-left: 10px;
+
     padding-right: 10px;
   }
 
@@ -2608,6 +2591,7 @@ body.light-mode .hero-photo-frame img {
 
   .hero {
     padding-left: 16px;
+
     padding-right: 16px;
   }
 
@@ -2648,11 +2632,13 @@ body.light-mode .hero-photo-frame img {
   }
 
   .browser-content {
-    padding: 10px;
+    padding: 0;
   }
 
-  .pesdo-preview {
-    padding: 20px;
+  .pesdo-image {
+    width: 100%;
+
+    height: auto;
   }
 
   .project-meta {
@@ -2724,7 +2710,9 @@ body.light-mode .hero-photo-frame img {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+
     animation-iteration-count: 1 !important;
+
     transition-duration: 0.01ms !important;
   }
 }
