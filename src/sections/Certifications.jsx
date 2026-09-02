@@ -1,6 +1,7 @@
 import introductionCybersecurity from "../assets/introduction-to-cybersecurity.pdf";
 import cyberThreatManagement from "../assets/cyber-threat-management.pdf";
 import sapS4Hana from "../assets/SAPS4HAHA_Glory.pdf";
+import schoolCertificates from "../assets/certs.pdf";
 export default function Certifications() {
   const certifications = [
     {
@@ -53,6 +54,23 @@ export default function Certifications() {
       ],
       certificate: sapS4Hana,
     },
+    {
+      number: "04",
+      category: "ACADEMIC / PROFESSIONAL DEVELOPMENT",
+      title: "IT & Software Development Training",
+      issuer: "STI College Philippines",
+      date: "2024",
+      description:
+        "A collection of school certificates recognizing completed training and participation in System Administration, Java Fundamentals, and the Student Development Program focused on MERN Stack development.",
+      skills: [
+        "System Administration",
+        "Java Fundamentals",
+        "MERN Stack",
+        "Web Development",
+        "Software Development",
+      ],
+      certificate: schoolCertificates,
+    },
   ];
   return (
     <section className="certifications" id="certifications">
@@ -73,9 +91,10 @@ export default function Certifications() {
             {" "}
             <p>
               {" "}
-              Certifications that reflect my continuous learning and growing
-              knowledge in information technology, cybersecurity, enterprise
-              systems, and modern digital technologies.{" "}
+              Certifications and training achievements that reflect my
+              continuous learning and growing knowledge in information
+              technology, cybersecurity, enterprise systems, and modern software
+              development.{" "}
             </p>{" "}
           </div>{" "}
         </div>{" "}
