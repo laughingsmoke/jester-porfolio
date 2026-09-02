@@ -39,7 +39,6 @@ body.light-mode {
   --bg: #f4f3ef;
   --text: #151515;
   --heading: #080808;
-
   --muted: #666666;
   --muted-light: #888888;
 
@@ -105,7 +104,6 @@ body::before {
   background-size: 60px 60px;
 
   mask-image: linear-gradient(to bottom, black, transparent 80%);
-
   -webkit-mask-image: linear-gradient(to bottom, black, transparent 80%);
 }
 
@@ -137,14 +135,12 @@ img {
 
 .navbar {
   position: fixed;
-
   top: 0;
   left: 50%;
 
   transform: translateX(-50%);
 
   width: min(1200px, calc(100% - 48px));
-
   height: 80px;
 
   display: flex;
@@ -155,6 +151,8 @@ img {
 
   border-bottom: 1px solid var(--border);
 
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
@@ -162,8 +160,9 @@ img {
 }
 
 .logo {
-  font-family: "Space Grotesk", sans-serif;
+  flex-shrink: 0;
 
+  font-family: "Space Grotesk", sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
 
@@ -181,7 +180,6 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-
   gap: 36px;
 }
 
@@ -199,7 +197,6 @@ img {
   content: "";
 
   position: absolute;
-
   left: 0;
   bottom: -7px;
 
@@ -226,7 +223,6 @@ img {
 .navbar-actions {
   display: flex;
   align-items: center;
-
   gap: 12px;
 }
 
@@ -319,7 +315,6 @@ img {
 
   align-items: center;
   justify-content: center;
-
   flex-direction: column;
 
   gap: 6px;
@@ -382,7 +377,6 @@ img {
   position: relative;
 
   min-height: 100vh;
-
   max-width: 1200px;
 
   margin: 0 auto;
@@ -437,7 +431,6 @@ img {
   font-size: clamp(4rem, 8vw, 7.5rem);
 
   line-height: 0.92;
-
   font-weight: 600;
 
   letter-spacing: -0.07em;
@@ -457,7 +450,6 @@ img {
   color: var(--muted);
 
   font-size: 1.05rem;
-
   line-height: 1.8;
 }
 
@@ -476,7 +468,6 @@ img {
 .primary-button,
 .secondary-button {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
@@ -508,7 +499,6 @@ img {
   border: 1px solid var(--border-strong);
 
   background: transparent;
-
   color: var(--heading);
 }
 
@@ -534,7 +524,6 @@ img {
   z-index: 2;
 
   display: flex;
-
   align-items: flex-end;
   justify-content: flex-end;
 }
@@ -554,11 +543,9 @@ img {
   content: "";
 
   position: absolute;
-
   inset: 0;
 
   z-index: 2;
-
   pointer-events: none;
 
   background:
@@ -570,11 +557,9 @@ img {
   content: "";
 
   position: absolute;
-
   inset: 0;
 
   z-index: 3;
-
   pointer-events: none;
 
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08));
@@ -587,7 +572,6 @@ img {
   display: block;
 
   object-fit: cover;
-
   object-position: center top;
 
   filter: grayscale(100%);
@@ -610,7 +594,6 @@ body.light-mode .hero-photo-frame img {
 
 .hero:hover .hero-photo-frame img {
   transform: scale(1.025);
-
   opacity: 1;
 }
 
@@ -623,9 +606,7 @@ body.light-mode .hero-photo-frame img {
   z-index: 5;
 
   display: flex;
-
   flex-direction: column;
-
   align-items: flex-end;
 
   gap: 5px;
@@ -656,7 +637,6 @@ body.light-mode .hero-photo-frame img {
   z-index: 5;
 
   display: flex;
-
   align-items: center;
 
   gap: 12px;
@@ -666,7 +646,6 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.7rem;
 
   text-transform: uppercase;
-
   letter-spacing: 0.15em;
 }
 
@@ -690,6 +669,7 @@ body.light-mode .hero-photo-frame img {
 .about,
 .projects,
 .skills,
+.certifications,
 .contact {
   padding: 140px 24px;
 
@@ -700,7 +680,6 @@ body.light-mode .hero-photo-frame img {
 
 .section-container {
   width: 100%;
-
   max-width: 1200px;
 
   margin: 0 auto;
@@ -712,7 +691,6 @@ body.light-mode .hero-photo-frame img {
   color: var(--muted-light);
 
   font-size: 0.7rem;
-
   font-weight: 600;
 
   letter-spacing: 0.18em;
@@ -738,7 +716,6 @@ body.light-mode .hero-photo-frame img {
   font-size: clamp(3rem, 5vw, 5rem);
 
   line-height: 1;
-
   font-weight: 600;
 
   letter-spacing: -0.06em;
@@ -760,7 +737,6 @@ body.light-mode .hero-photo-frame img {
   color: var(--muted);
 
   font-size: 1rem;
-
   line-height: 1.9;
 }
 
@@ -770,7 +746,6 @@ body.light-mode .hero-photo-frame img {
   color: var(--text);
 
   font-size: 1.2rem;
-
   line-height: 1.7;
 }
 
@@ -786,7 +761,6 @@ body.light-mode .hero-photo-frame img {
   gap: 24px;
 
   margin-top: 55px;
-
   padding-top: 28px;
 
   border-top: 1px solid var(--border);
@@ -794,7 +768,6 @@ body.light-mode .hero-photo-frame img {
 
 .about-details div {
   display: flex;
-
   flex-direction: column;
 
   gap: 8px;
@@ -806,7 +779,6 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.7rem;
 
   text-transform: uppercase;
-
   letter-spacing: 0.12em;
 }
 
@@ -814,7 +786,6 @@ body.light-mode .hero-photo-frame img {
   color: var(--text);
 
   font-size: 0.8rem;
-
   font-weight: 500;
 }
 
@@ -842,7 +813,6 @@ body.light-mode .hero-photo-frame img {
   font-size: clamp(3rem, 5vw, 5rem);
 
   line-height: 1;
-
   font-weight: 600;
 
   letter-spacing: -0.06em;
@@ -860,7 +830,6 @@ body.light-mode .hero-photo-frame img {
   color: var(--muted);
 
   font-size: 1rem;
-
   line-height: 1.9;
 }
 
@@ -870,7 +839,6 @@ body.light-mode .hero-photo-frame img {
 
 .projects-list {
   display: flex;
-
   flex-direction: column;
 
   gap: 18px;
@@ -888,7 +856,6 @@ body.light-mode .hero-photo-frame img {
   background: var(--card);
 
   display: flex;
-
   flex-direction: column;
 
   justify-content: space-between;
@@ -945,9 +912,7 @@ body.light-mode .hero-photo-frame img {
   z-index: 1;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   gap: 20px;
@@ -967,7 +932,6 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.7rem;
 
   text-transform: uppercase;
-
   letter-spacing: 0.12em;
 }
 
@@ -981,7 +945,6 @@ body.light-mode .hero-photo-frame img {
   z-index: 1;
 
   display: flex;
-
   flex-direction: column;
 
   gap: 20px;
@@ -993,7 +956,6 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.7rem;
 
   text-transform: uppercase;
-
   letter-spacing: 0.15em;
 }
 
@@ -1021,7 +983,6 @@ body.light-mode .hero-photo-frame img {
   color: var(--muted);
 
   font-size: 0.95rem;
-
   line-height: 1.8;
 }
 
@@ -1035,9 +996,7 @@ body.light-mode .hero-photo-frame img {
   z-index: 1;
 
   display: flex;
-
   align-items: flex-end;
-
   justify-content: space-between;
 
   gap: 20px;
@@ -1051,7 +1010,6 @@ body.light-mode .hero-photo-frame img {
 
 .project-tech {
   display: flex;
-
   flex-wrap: wrap;
 
   gap: 8px;
@@ -1061,7 +1019,6 @@ body.light-mode .hero-photo-frame img {
   padding: 7px 11px;
 
   border: 1px solid var(--border);
-
   border-radius: 100px;
 
   color: var(--muted);
@@ -1093,16 +1050,13 @@ body.light-mode .hero-photo-frame img {
   height: 48px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border: 1px solid var(--border-strong);
-
   border-radius: 50%;
 
   background: transparent;
-
   color: var(--heading);
 
   font-size: 1.2rem;
@@ -1133,11 +1087,9 @@ body.light-mode .hero-photo-frame img {
   margin-top: 40px;
 
   width: 100%;
-
   min-height: 420px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -1186,7 +1138,6 @@ body.light-mode .hero-photo-frame img {
   z-index: 2;
 
   width: calc(100% - 80px);
-
   max-width: 850px;
 
   border: 1px solid var(--border-strong);
@@ -1241,7 +1192,6 @@ body.light-mode .hero-photo-frame img {
 
 .browser-dots {
   display: flex;
-
   align-items: center;
 
   gap: 6px;
@@ -1276,7 +1226,6 @@ body.light-mode .hero-photo-frame img {
   overflow: hidden;
 
   white-space: nowrap;
-
   text-overflow: ellipsis;
 }
 
@@ -1309,11 +1258,9 @@ body.light-mode .hero-photo-frame img {
   min-height: 310px;
 
   display: flex;
-
   flex-direction: column;
 
   justify-content: center;
-
   align-items: flex-start;
 
   padding: 40px;
@@ -1377,11 +1324,9 @@ body.light-mode .hero-photo-frame img {
 
 .preview-lines {
   width: 100%;
-
   max-width: 320px;
 
   display: flex;
-
   flex-direction: column;
 
   gap: 8px;
@@ -1421,9 +1366,7 @@ body.light-mode .hero-photo-frame img {
   grid-template-columns: repeat(4, 1fr);
 
   border-left: 1px solid var(--border);
-
   border-right: 1px solid var(--border);
-
   border-bottom: 1px solid var(--border);
 }
 
@@ -1431,7 +1374,6 @@ body.light-mode .hero-photo-frame img {
   padding: 22px 24px;
 
   display: flex;
-
   flex-direction: column;
 
   gap: 8px;
@@ -1449,7 +1391,6 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.65rem;
 
   text-transform: uppercase;
-
   letter-spacing: 0.12em;
 }
 
@@ -1457,7 +1398,6 @@ body.light-mode .hero-photo-frame img {
   color: var(--text);
 
   font-size: 0.75rem;
-
   font-weight: 500;
 }
 
@@ -1467,15 +1407,12 @@ body.light-mode .hero-photo-frame img {
 
 .projects-coming {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   gap: 30px;
 
   margin-top: 60px;
-
   padding-top: 25px;
 
   border-top: 1px solid var(--border);
@@ -1549,7 +1486,6 @@ body.light-mode .hero-photo-frame img {
 
 .skills-list {
   display: flex;
-
   flex-direction: column;
 
   border-top: 1px solid var(--border);
@@ -1577,7 +1513,6 @@ body.light-mode .hero-photo-frame img {
 
 .skill-card:hover {
   padding-left: 20px;
-
   padding-right: 20px;
 
   background: var(--card-hover);
@@ -1617,7 +1552,6 @@ body.light-mode .hero-photo-frame img {
 
 .skill-technologies {
   display: flex;
-
   flex-wrap: wrap;
 
   gap: 8px;
@@ -1635,6 +1569,322 @@ body.light-mode .hero-photo-frame img {
   color: var(--muted);
 
   font-size: 0.7rem;
+}
+
+/* =========================================================
+   CERTIFICATIONS
+========================================================= */
+
+.certifications-header {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.2fr;
+
+  gap: 100px;
+
+  align-items: end;
+
+  margin-bottom: 80px;
+}
+
+.certifications-heading h2 {
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: -0.06em;
+
+  color: var(--heading);
+}
+
+.certifications-heading h2 span {
+  color: var(--muted-light);
+}
+
+.certifications-intro {
+  max-width: 560px;
+}
+
+.certifications-intro p {
+  color: var(--muted);
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+/* =========================================================
+   CERTIFICATIONS LIST
+========================================================= */
+
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+
+  border-top: 1px solid var(--border);
+}
+
+/* =========================================================
+   CERTIFICATION CARD
+========================================================= */
+
+.certification-card {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    1fr;
+
+  gap: 30px;
+
+  padding: 42px 0;
+
+  border-bottom: 1px solid var(--border);
+
+  transition:
+    padding 0.4s ease,
+    background 0.4s ease;
+}
+
+.certification-card:hover {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background: var(--card-hover);
+}
+
+/* =========================================================
+   CERTIFICATION NUMBER
+========================================================= */
+
+.certification-number {
+  color: var(--muted-light);
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 0.8rem;
+}
+
+/* =========================================================
+   CERTIFICATION CONTENT
+========================================================= */
+
+.certification-content {
+  min-width: 0;
+}
+
+.certification-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 18px;
+}
+
+.certification-category,
+.certification-date {
+  color: var(--muted-light);
+
+  font-size: 0.7rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.certification-date {
+  color: var(--muted);
+}
+
+/* =========================================================
+   CERTIFICATION TITLE
+========================================================= */
+
+.certification-content h3 {
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: -0.055em;
+
+  color: var(--heading);
+
+  transition: transform 0.4s ease;
+}
+
+.certification-card:hover .certification-content h3 {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   CERTIFICATION ISSUER
+========================================================= */
+
+.certification-issuer {
+  margin-top: 18px;
+
+  color: var(--muted);
+
+  font-size: 0.85rem;
+
+  line-height: 1.7;
+}
+
+.certification-issuer strong {
+  color: var(--text);
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   CERTIFICATION DESCRIPTION
+========================================================= */
+
+.certification-description {
+  max-width: 700px;
+
+  margin-top: 16px;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CERTIFICATION BOTTOM
+========================================================= */
+
+.certification-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 30px;
+}
+
+/* =========================================================
+   CERTIFICATION SKILLS
+========================================================= */
+
+.certification-skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.certification-skills span {
+  padding: 7px 11px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 100px;
+
+  color: var(--muted);
+
+  font-size: 0.7rem;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.certification-skills span:hover {
+  border-color: var(--border-strong);
+
+  color: var(--text);
+
+  background: var(--card-hover);
+}
+
+/* =========================================================
+   CERTIFICATION LINK
+========================================================= */
+
+.certification-link {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid var(--border-strong);
+
+  color: var(--heading);
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 0.8rem;
+
+  white-space: nowrap;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.certification-link span {
+  transition: transform 0.3s ease;
+}
+
+.certification-link:hover {
+  border-color: var(--heading);
+
+  transform: translateY(-2px);
+}
+
+.certification-link:hover span {
+  transform: translate(4px, -4px);
+}
+
+/* =========================================================
+   CERTIFICATIONS FOOTER
+========================================================= */
+
+.certifications-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 60px;
+  padding-top: 25px;
+
+  border-top: 1px solid var(--border);
+}
+
+.certifications-footer span {
+  color: var(--muted-light);
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.15em;
+}
+
+.certifications-footer p {
+  color: var(--muted);
+
+  font-size: 0.8rem;
 }
 
 /* =========================================================
@@ -1697,7 +1947,6 @@ body.light-mode .hero-photo-frame img {
 
 .contact-methods {
   display: flex;
-
   flex-direction: column;
 
   align-items: flex-start;
@@ -1708,7 +1957,6 @@ body.light-mode .hero-photo-frame img {
 .contact-email,
 .contact-phone {
   display: inline-flex;
-
   align-items: center;
 
   gap: 16px;
@@ -1749,7 +1997,6 @@ body.light-mode .hero-photo-frame img {
 
 .social-links {
   display: flex;
-
   flex-wrap: wrap;
 
   gap: 10px;
@@ -1759,7 +2006,6 @@ body.light-mode .hero-photo-frame img {
 
 .social-links a {
   display: inline-flex;
-
   align-items: center;
 
   gap: 10px;
@@ -1817,7 +2063,6 @@ body.light-mode .hero-photo-frame img {
   font-size: 0.75rem;
 
   text-transform: uppercase;
-
   letter-spacing: 0.12em;
 
   transition: color 0.3s ease;
@@ -1865,6 +2110,14 @@ body.light-mode .hero-photo-frame img {
 ========================================================= */
 
 @media (max-width: 1000px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .navbar-actions {
+    gap: 8px;
+  }
+
   .hero-content {
     width: 70%;
   }
@@ -1879,6 +2132,7 @@ body.light-mode .hero-photo-frame img {
   .about-grid,
   .projects-header,
   .skills-header,
+  .certifications-header,
   .contact-content {
     gap: 60px;
   }
@@ -1893,12 +2147,16 @@ body.light-mode .hero-photo-frame img {
 ========================================================= */
 
 @media (max-width: 768px) {
-  /* NAVBAR */
+  /* =======================================================
+     NAVBAR
+  ======================================================= */
 
   .navbar {
     width: calc(100% - 32px);
 
     height: 70px;
+
+    padding: 0 4px;
   }
 
   .nav-links {
@@ -1913,6 +2171,11 @@ body.light-mode .hero-photo-frame img {
     margin-left: auto;
 
     gap: 8px;
+  }
+
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
   }
 
   .mobile-menu-button {
@@ -1930,7 +2193,6 @@ body.light-mode .hero-photo-frame img {
     padding: 12px;
 
     display: flex;
-
     flex-direction: column;
 
     gap: 4px;
@@ -1940,11 +2202,9 @@ body.light-mode .hero-photo-frame img {
     background: color-mix(in srgb, var(--bg) 94%, transparent);
 
     backdrop-filter: blur(20px);
-
     -webkit-backdrop-filter: blur(20px);
 
     opacity: 0;
-
     visibility: hidden;
 
     transform: translateY(-10px);
@@ -1986,7 +2246,9 @@ body.light-mode .hero-photo-frame img {
     border-color: var(--border);
   }
 
-  /* HERO */
+  /* =======================================================
+     HERO
+  ======================================================= */
 
   .hero {
     min-height: 100vh;
@@ -2026,7 +2288,6 @@ body.light-mode .hero-photo-frame img {
     bottom: 0;
 
     width: 330px;
-
     height: 470px;
 
     opacity: 0.45;
@@ -2052,11 +2313,14 @@ body.light-mode .hero-photo-frame img {
     left: 16px;
   }
 
-  /* SECTIONS */
+  /* =======================================================
+     SECTIONS
+  ======================================================= */
 
   .about,
   .projects,
   .skills,
+  .certifications,
   .contact {
     padding: 100px 16px;
   }
@@ -2069,7 +2333,9 @@ body.light-mode .hero-photo-frame img {
     margin-bottom: 50px;
   }
 
-  /* ABOUT */
+  /* =======================================================
+     ABOUT
+  ======================================================= */
 
   .about-grid {
     grid-template-columns: 1fr;
@@ -2091,7 +2357,9 @@ body.light-mode .hero-photo-frame img {
     gap: 22px;
   }
 
-  /* PROJECTS */
+  /* =======================================================
+     PROJECTS
+  ======================================================= */
 
   .projects-header {
     grid-template-columns: 1fr;
@@ -2135,7 +2403,9 @@ body.light-mode .hero-photo-frame img {
     gap: 12px;
   }
 
-  /* PROJECT VISUAL */
+  /* =======================================================
+     PROJECT VISUAL
+  ======================================================= */
 
   .project-visual {
     min-height: 350px;
@@ -2169,7 +2439,9 @@ body.light-mode .hero-photo-frame img {
     font-size: clamp(2rem, 10vw, 3rem);
   }
 
-  /* PROJECT META */
+  /* =======================================================
+     PROJECT META
+  ======================================================= */
 
   .project-meta {
     grid-template-columns: repeat(2, 1fr);
@@ -2183,7 +2455,9 @@ body.light-mode .hero-photo-frame img {
     border-bottom: 1px solid var(--border);
   }
 
-  /* EXPERTISE */
+  /* =======================================================
+     EXPERTISE
+  ======================================================= */
 
   .skills-header {
     grid-template-columns: 1fr;
@@ -2213,7 +2487,6 @@ body.light-mode .hero-photo-frame img {
 
   .skill-card:hover {
     padding-left: 10px;
-
     padding-right: 10px;
   }
 
@@ -2225,7 +2498,72 @@ body.light-mode .hero-photo-frame img {
     font-size: 0.85rem;
   }
 
-  /* CONTACT */
+  /* =======================================================
+     CERTIFICATIONS
+  ======================================================= */
+
+  .certifications-header {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    margin-bottom: 55px;
+  }
+
+  .certifications-heading h2 {
+    font-size: clamp(3rem, 14vw, 4.5rem);
+  }
+
+  .certifications-intro p {
+    font-size: 0.95rem;
+  }
+
+  .certification-card {
+    grid-template-columns:
+      40px
+      1fr;
+
+    gap: 15px;
+
+    padding: 32px 0;
+  }
+
+  .certification-card:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .certification-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .certification-description {
+    font-size: 0.85rem;
+  }
+
+  .certification-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 22px;
+  }
+
+  .certification-link {
+    font-size: 0.75rem;
+  }
+
+  .certifications-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  /* =======================================================
+     CONTACT
+  ======================================================= */
 
   .contact-content {
     grid-template-columns: 1fr;
@@ -2260,9 +2598,16 @@ body.light-mode .hero-photo-frame img {
 ========================================================= */
 
 @media (max-width: 420px) {
+  .navbar {
+    width: calc(100% - 24px);
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
   .hero {
     padding-left: 16px;
-
     padding-right: 16px;
   }
 
@@ -2326,6 +2671,40 @@ body.light-mode .hero-photo-frame img {
     border-bottom: none;
   }
 
+  /* =======================================================
+     CERTIFICATIONS
+  ======================================================= */
+
+  .certification-card {
+    grid-template-columns:
+      30px
+      1fr;
+
+    gap: 12px;
+  }
+
+  .certification-top {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .certification-content h3 {
+    font-size: 1.7rem;
+  }
+
+  .certification-skills span {
+    font-size: 0.65rem;
+
+    padding: 6px 9px;
+  }
+
+  /* =======================================================
+     CONTACT
+  ======================================================= */
+
   .contact-email,
   .contact-phone {
     font-size: 0.95rem;
@@ -2345,9 +2724,7 @@ body.light-mode .hero-photo-frame img {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
-
     animation-iteration-count: 1 !important;
-
     transition-duration: 0.01ms !important;
   }
 }
