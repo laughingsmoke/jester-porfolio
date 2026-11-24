@@ -1,126 +1,148 @@
-import pesdoImage from "../assets/pesdo.png";
+import pesdoImage from "../assets/pesdo.webp";
+import cercanImage from "../assets/cercantech.webp";
+import hmeImage from "../assets/health-made-easy.webp";
+import craftiqueImage from "../assets/craftique.webp";
+
+const projects = [
+  {
+    name: "Cercan Tech",
+    type: "Company Website",
+    category: "IT Solutions · Surigao City",
+    description:
+      "The corporate website for Cercan Tech Digital Platforms OPC, presenting the company's services, its products, a step-by-step client process, FAQs, and a contact form for businesses and institutions across the Caraga region.",
+    tech: ["Responsive Design", "Lead Generation", "Contact Form", "SEO"],
+    url: "https://cercantech.com/",
+    domain: "cercantech.com",
+    image: cercanImage,
+    imageSize: [1600, 900],
+    role: "Developer",
+  },
+  {
+    name: "Health Made Easy",
+    type: "Mobile App + Landing Page",
+    category: "Clinic Booking & Queueing",
+    description:
+      "An Android clinic booking app that lets patients book sessions, check in with a QR code, and follow their place in the queue live, with a companion staff app for doctors and secretaries to run sessions and call the next patient.",
+    tech: ["Android", "QR Check-in", "Live Queue", "Messaging"],
+    url: "https://health-made-easy.com/",
+    domain: "health-made-easy.com",
+    image: hmeImage,
+    imageSize: [1600, 830],
+    role: "Developer",
+  },
+  {
+    name: "Craftique",
+    type: "Business Website",
+    category: "Handmade Flowers & Bouquets",
+    description:
+      "An online storefront for a handmade pipe-cleaner bouquet business in Alegria, Surigao del Norte, showcasing bouquets by occasion, custom orders, and a simple order-via-Messenger flow.",
+    tech: ["React", "Vite", "Vercel", "Responsive Design"],
+    url: "https://craftique-alpha.vercel.app/",
+    domain: "craftique-alpha.vercel.app",
+    image: craftiqueImage,
+    imageSize: [1600, 900],
+    role: "Developer",
+  },
+  {
+    name: "PESDO",
+    type: "Web Application",
+    category: "Public Employment System",
+    description:
+      "A web-based employment platform designed to help jobseekers, employers, and PESDO staff manage job opportunities, referrals, and employment information in one centralized system.",
+    tech: ["React", "JavaScript", "PHP", "MySQL", "SMS"],
+    url: "https://www.pesdosurigao.online/",
+    domain: "pesdosurigao.online",
+    image: pesdoImage,
+    imageSize: [1600, 828],
+    role: "Developer",
+  },
+];
+
+function ProjectCard({ project, index }) {
+  const number = String(index + 1).padStart(2, "0");
+  const [width, height] = project.imageSize;
+  const featured = index === 0;
+
+  return (
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`project-card card reveal ${featured ? "project-featured" : ""}`}
+      aria-label={`${project.name}: visit live site`}
+    >
+      <div className="project-shot">
+        <div className="shot-bar" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <em>{project.domain}</em>
+        </div>
+        <img
+          src={project.image}
+          alt={`${project.name} website screenshot`}
+          width={width}
+          height={height}
+          loading={featured ? "eager" : "lazy"}
+          decoding="async"
+        />
+      </div>
+
+      <div className="project-body">
+        <div className="project-meta mono">
+          <span>{number}</span>
+          <span>{project.type}</span>
+        </div>
+
+        <h3>{project.name}</h3>
+        <p className="project-category">{project.category}</p>
+        <p className="project-description">{project.description}</p>
+
+        <ul className="chips" aria-label="Technologies">
+          {project.tech.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+
+        <div className="project-footer">
+          <span className="status">
+            <span className="status-dot" aria-hidden="true"></span>
+            Live · {project.role}
+          </span>
+          <span className="project-cta">
+            Visit site <span aria-hidden="true">↗</span>
+          </span>
+        </div>
+      </div>
+    </a>
+  );
+}
+
 function Projects() {
   return (
-    <section className="projects" id="projects">
-      {" "}
-      <div className="section-container">
-        {" "}
-        <div className="section-label">02 — SELECTED WORK</div>{" "}
-        <div className="projects-header">
-          {" "}
-          <div className="projects-heading">
-            {" "}
+    <section className="section" id="projects">
+      <div className="container">
+        <div className="section-head section-head-split reveal">
+          <div>
+            <span className="eyebrow">02 / Selected work</span>
             <h2>
-              {" "}
-              Selected <br /> <span>work.</span>{" "}
-            </h2>{" "}
-          </div>{" "}
-          <div className="projects-intro">
-            {" "}
-            <p>
-              {" "}
-              A selection of projects focused on solving practical problems
-              through thoughtful design, modern web technologies, and reliable
-              systems.{" "}
-            </p>{" "}
-          </div>{" "}
-        </div>{" "}
-        <div className="projects-list">
-          {" "}
-          <a
-            href="https://www.pesdosurigao.online/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-card project-link"
-            aria-label="Visit PESDO live website"
-          >
-            {" "}
-            {/* PROJECT TOP */}{" "}
-            <div className="project-top">
-              {" "}
-              <span className="project-number">01</span>{" "}
-              <span className="project-type">WEB APPLICATION</span>{" "}
-            </div>{" "}
-            {/* PROJECT CONTENT */}{" "}
-            <div className="project-content">
-              {" "}
-              <div className="project-category">
-                PUBLIC EMPLOYMENT SYSTEM
-              </div>{" "}
-              <h3>PESDO</h3>{" "}
-              <p>
-                {" "}
-                A web-based employment platform designed to help jobseekers,
-                employers, and PESDO staff manage job opportunities, referrals,
-                and employment information in one centralized system.{" "}
-              </p>{" "}
-            </div>{" "}
-            {/* PROJECT BOTTOM */}{" "}
-            <div className="project-bottom">
-              {" "}
-              <div className="project-tech">
-                {" "}
-                <span>React</span> <span>JavaScript</span> <span>PHP</span>{" "}
-                <span>MySQL</span> <span>SMS</span>{" "}
-              </div>{" "}
-              <div className="project-arrow" aria-hidden="true">
-                {" "}
-                ↗{" "}
-              </div>{" "}
-            </div>{" "}
-            {/* PROJECT VISUAL */}{" "}
-            <div className="project-visual">
-              {" "}
-              <div className="browser-window">
-                {" "}
-                <div className="browser-top">
-                  {" "}
-                  <div className="browser-dots">
-                    {" "}
-                    <span></span> <span></span> <span></span>{" "}
-                  </div>{" "}
-                  <div className="browser-address"> pesdosurigao.online </div>{" "}
-                  <div className="browser-icon">↗</div>{" "}
-                </div>{" "}
-                <div className="browser-content">
-                  {" "}
-                  <img
-                    src={pesdoImage}
-                    alt="PESDO web application"
-                    className="pesdo-image"
-                  />{" "}
-                </div>{" "}
-              </div>{" "}
-            </div>{" "}
-            {/* PROJECT META */}{" "}
-            <div className="project-meta">
-              {" "}
-              <div>
-                {" "}
-                <span>Type</span> <strong>Web Application</strong>{" "}
-              </div>{" "}
-              <div>
-                {" "}
-                <span>Role</span> <strong>Developer</strong>{" "}
-              </div>{" "}
-              <div>
-                {" "}
-                <span>Status</span> <strong>Live</strong>{" "}
-              </div>{" "}
-              <div>
-                {" "}
-                <span>Website</span> <strong>pesdosurigao.online</strong>{" "}
-              </div>{" "}
-            </div>{" "}
-          </a>{" "}
-        </div>{" "}
-        <div className="projects-coming">
-          {" "}
-          <span>MORE PROJECTS</span>{" "}
-          <p>More work currently in development.</p>{" "}
-        </div>{" "}
-      </div>{" "}
+              Shipped <span className="text-fade">&amp; live.</span>
+            </h2>
+          </div>
+          <p>
+            Real projects in production, solving practical problems for
+            government offices, clinics, and local businesses.
+          </p>
+        </div>
+
+        <div className="bento">
+          {projects.map((project, index) => (
+            <ProjectCard key={project.name} project={project} index={index} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
+
 export default Projects;

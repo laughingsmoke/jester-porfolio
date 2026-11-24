@@ -1,107 +1,61 @@
+const stack = [
+  {
+    title: "Frontend",
+    description:
+      "Responsive, user-focused interfaces with clean, maintainable code.",
+    tools: ["React", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    title: "Backend",
+    description:
+      "Application logic, APIs, authentication, and server-side systems.",
+    tools: ["PHP", "Node.js", "REST APIs", "SMS Integration"],
+  },
+  {
+    title: "Database",
+    description:
+      "Structured schemas that store, manage, and retrieve data efficiently.",
+    tools: ["MySQL", "SQL", "Cloud SQL", "Database Design"],
+  },
+  {
+    title: "Tools & Deployment",
+    description: "Modern workflows to build, test, deploy, and maintain apps.",
+    tools: ["Git", "GitHub", "VS Code", "Google Cloud", "Vercel"],
+  },
+];
+
 function Skills() {
   return (
-    <section className="skills" id="skills">
-      <div className="section-container">
-        <div className="section-label">03 — EXPERTISE</div>
-
-        <div className="skills-header">
-          <div className="skills-heading">
+    <section className="section" id="skills">
+      <div className="container">
+        <div className="section-head section-head-split reveal">
+          <div>
+            <span className="eyebrow">03 / Technical stack</span>
             <h2>
-              What I
-              <br />
-              <span>do.</span>
+              Tools of <span className="text-fade">the trade.</span>
             </h2>
           </div>
-
-          <div className="skills-intro">
-            <p>
-              I work across the full web development process, from designing
-              interfaces and building applications to structuring databases and
-              connecting systems together.
-            </p>
-          </div>
+          <p>
+            I work across the full web development process, from interface to
+            database to deployment.
+          </p>
         </div>
 
-        <div className="skills-list">
-          <div className="skill-card">
-            <div className="skill-number">01</div>
-
-            <div className="skill-main">
-              <h3>Frontend Development</h3>
-
-              <p>
-                Creating responsive, modern, and user-focused interfaces with
-                clean and maintainable code.
-              </p>
-
-              <div className="skill-technologies">
-                <span>React</span>
-                <span>JavaScript</span>
-                <span>HTML</span>
-                <span>CSS</span>
+        <div className="stack-grid">
+          {stack.map((group, index) => (
+            <article className="stack-card card reveal" key={group.title}>
+              <div className="stack-top mono">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <span>{group.title}</span>
               </div>
-            </div>
-          </div>
-
-          <div className="skill-card">
-            <div className="skill-number">02</div>
-
-            <div className="skill-main">
-              <h3>Backend Development</h3>
-
-              <p>
-                Building application logic, APIs, authentication, and
-                server-side systems that support reliable web applications.
-              </p>
-
-              <div className="skill-technologies">
-                <span>PHP</span>
-                <span>REST APIs</span>
-                <span>Node.js</span>
-                <span>MySQL</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="skill-card">
-            <div className="skill-number">03</div>
-
-            <div className="skill-main">
-              <h3>Database & Systems</h3>
-
-              <p>
-                Designing structured databases and connecting application
-                systems to store, manage, and retrieve information efficiently.
-              </p>
-
-              <div className="skill-technologies">
-                <span>MySQL</span>
-                <span>SQL</span>
-                <span>Cloud SQL</span>
-                <span>Database Design</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="skill-card">
-            <div className="skill-number">04</div>
-
-            <div className="skill-main">
-              <h3>Tools & Workflow</h3>
-
-              <p>
-                Using modern development tools and workflows to build, test,
-                deploy, and maintain web applications.
-              </p>
-
-              <div className="skill-technologies">
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>VS Code</span>
-                <span>Google Cloud</span>
-              </div>
-            </div>
-          </div>
+              <p>{group.description}</p>
+              <ul className="chips">
+                {group.tools.map((tool) => (
+                  <li key={tool}>{tool}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </div>
     </section>

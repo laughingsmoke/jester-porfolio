@@ -1,47 +1,81 @@
-import jesterPhoto from "../assets/jester.png";
+import { profile, resumeUrl } from "../data/profile";
+
+const stats = [
+  { value: "4", accent: "", label: "Live projects" },
+  { value: "4", accent: "", label: "Certifications" },
+  { value: "Full", accent: "-stack", label: "React · PHP · MySQL" },
+  { value: "PH", accent: ".", label: "Surigao City" },
+];
 
 function Hero() {
   return (
     <section className="hero" id="home">
-      <div className="hero-content">
-        <div className="hero-label">WEB DEVELOPER</div>
+      <div className="container hero-inner">
+        <div className="badge">
+          <span className="badge-dot" aria-hidden="true"></span>
+          Available for hire
+        </div>
 
-        <h1>
-          Hello, I'm <br />
-          <span>Jester.</span>
+        <h1 className="hero-title">
+          Building web apps
+          <br />
+          <span className="text-fade">people rely on.</span>
         </h1>
 
         <p className="hero-description">
-          I build digital experiences that are fast, functional, and
-          thoughtfully designed. Turning ideas into clean, modern, and
-          meaningful web applications.
+          I'm <strong>{profile.name}</strong>, a {profile.role.toLowerCase()}{" "}
+          who ships production systems end to end, from{" "}
+          <strong>React interfaces</strong> to <strong>PHP &amp; MySQL</strong>{" "}
+          backends. My work is live and in daily use across government,
+          healthcare, and local business.
         </p>
 
         <div className="hero-actions">
-          <a href="#projects" className="primary-button">
-            View Projects <span>↗</span>
+          <a href="#projects" className="btn btn-primary">
+            View my work
           </a>
 
-          <a href="#contact" className="secondary-button">
-            Let's Talk <span>→</span>
+          {resumeUrl && (
+            <a
+              href={resumeUrl}
+              className="btn btn-ghost"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Résumé ↓
+            </a>
+          )}
+
+          <a
+            href={profile.github}
+            className="btn btn-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href={profile.linkedin}
+            className="btn btn-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
           </a>
         </div>
-      </div>
 
-      <div className="hero-photo">
-        <div className="hero-photo-frame">
-          <img src={jesterPhoto} alt="Jester Glory" />
-        </div>
-
-        <div className="hero-photo-label">
-          <span>JESTER GLORY</span>
-          <span>WEB DEVELOPER</span>
-        </div>
-      </div>
-
-      <div className="hero-scroll">
-        <span></span>
-        Scroll to explore
+        <dl className="hero-stats">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <dd>
+                {stat.value}
+                <span className="accent">{stat.accent}</span>
+              </dd>
+              <dt>{stat.label}</dt>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );

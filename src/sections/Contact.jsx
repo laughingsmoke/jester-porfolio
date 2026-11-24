@@ -1,71 +1,63 @@
+import { profile, resumeUrl } from "../data/profile";
+
 function Contact() {
   return (
-    <section className="contact" id="contact">
-      <div className="section-container">
-        <div className="section-label">04 — CONTACT</div>
+    <section className="section" id="contact">
+      <div className="container">
+        <div className="contact-card card reveal">
+          <span className="eyebrow">05 / Contact</span>
 
-        <div className="contact-content">
-          <div className="contact-heading">
-            <h2>
-              Let's build
-              <br />
-              <span>something.</span>
-            </h2>
+          <h2>
+            Let's work <span className="text-fade">together.</span>
+          </h2>
+
+          <p>
+            Hiring for a developer role, or have a project in mind? I'm open to
+            full-time positions and freelance work. Email is the fastest way
+            to reach me.
+          </p>
+
+          <a href={`mailto:${profile.email}`} className="contact-email">
+            {profile.email} <span aria-hidden="true">↗</span>
+          </a>
+
+          <div className="contact-actions">
+            <a href={`mailto:${profile.email}`} className="btn btn-primary">
+              Send an email
+            </a>
+            {resumeUrl && (
+              <a
+                href={resumeUrl}
+                className="btn btn-ghost"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Résumé ↓
+              </a>
+            )}
+            <a href={profile.phoneHref} className="btn btn-ghost">
+              {profile.phone}
+            </a>
           </div>
 
-          <div className="contact-info">
-            <p>
-              Have a project, idea, or opportunity in mind? I'm always open to
-              discussing new ideas, collaborations, and meaningful projects.
-            </p>
-
-            <div className="contact-methods">
-              <a
-                href="mailto:jesterglory15@gmail.com"
-                className="contact-email"
-              >
-                jesterglory15@gmail.com
-                <span>↗</span>
-              </a>
-
-              <a href="tel:+639996716744" className="contact-phone">
-                +63 999 671 6744
-                <span>↗</span>
-              </a>
-            </div>
-
-            <div className="social-links">
-              <a
-                href="https://github.com/laughingsmoke"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-                <span>↗</span>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/jester-glory-6055b8380/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-                <span>↗</span>
-              </a>
-
-              <a
-                href="https://www.facebook.com/jester.pabas/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook
-                <span>↗</span>
-              </a>
-            </div>
-
-            <div className="contact-links">
-              <a href="#home">Back to top ↑</a>
-            </div>
+          <div className="contact-socials">
+            <a href={profile.github} target="_blank" rel="noopener noreferrer">
+              GitHub ↗
+            </a>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+            <a
+              href={profile.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook ↗
+            </a>
           </div>
         </div>
       </div>

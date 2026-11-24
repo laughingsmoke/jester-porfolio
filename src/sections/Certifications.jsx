@@ -73,90 +73,62 @@ export default function Certifications() {
     },
   ];
   return (
-    <section className="certifications" id="certifications">
-      {" "}
-      <div className="section-container">
-        {" "}
-        <div className="section-label">06 — CERTIFICATIONS</div>{" "}
-        <div className="certifications-header">
-          {" "}
-          <div className="certifications-heading">
-            {" "}
+    <section className="section" id="certifications">
+      <div className="container">
+        <div className="section-head section-head-split reveal">
+          <div>
+            <span className="eyebrow">04 / Certifications</span>
             <h2>
-              {" "}
-              Learning <br /> <span>&amp; Growth.</span>{" "}
-            </h2>{" "}
-          </div>{" "}
-          <div className="certifications-intro">
-            {" "}
-            <p>
-              {" "}
-              Certifications and training achievements that reflect my
-              continuous learning and growing knowledge in information
-              technology, cybersecurity, enterprise systems, and modern software
-              development.{" "}
-            </p>{" "}
-          </div>{" "}
-        </div>{" "}
-        <div className="certifications-list">
-          {" "}
+              Learning <span className="text-fade">log.</span>
+            </h2>
+          </div>
+          <p>
+            Certifications and training in software development, cybersecurity,
+            and enterprise systems.
+          </p>
+        </div>
+
+        <ol className="log card reveal">
+          <li className="log-header mono" aria-hidden="true">
+            <span className="log-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            ~/certifications.log
+          </li>
+
           {certifications.map((certification) => (
-            <article className="certification-card" key={certification.number}>
-              {" "}
-              <div className="certification-number">
-                {" "}
-                {certification.number}{" "}
-              </div>{" "}
-              <div className="certification-content">
-                {" "}
-                <div className="certification-top">
-                  {" "}
-                  <span className="certification-category">
-                    {" "}
-                    {certification.category}{" "}
-                  </span>{" "}
-                  <span className="certification-date">
-                    {" "}
-                    {certification.date}{" "}
-                  </span>{" "}
-                </div>{" "}
-                <h3>{certification.title}</h3>{" "}
-                <p className="certification-issuer">
-                  {" "}
-                  Issued by <strong>{certification.issuer}</strong>{" "}
-                </p>{" "}
-                <p className="certification-description">
-                  {" "}
-                  {certification.description}{" "}
-                </p>{" "}
-                <div className="certification-bottom">
-                  {" "}
-                  <div className="certification-skills">
-                    {" "}
-                    {certification.skills.map((skill) => (
-                      <span key={skill}>{skill}</span>
-                    ))}{" "}
-                  </div>{" "}
-                  <a
-                    href={certification.certificate}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="certification-link"
-                  >
-                    {" "}
-                    View Certificate <span>↗</span>{" "}
-                  </a>{" "}
-                </div>{" "}
-              </div>{" "}
-            </article>
-          ))}{" "}
-        </div>{" "}
-        <div className="certifications-footer">
-          {" "}
-          <span>CONTINUOUS LEARNING</span>{" "}
-          <p>More certifications will be added as I continue to grow.</p>{" "}
-        </div>{" "}
-      </div>{" "}
+            <li className="log-entry" key={certification.number}>
+              <div className="log-when mono">
+                <span>{certification.date}</span>
+                <span>{certification.category}</span>
+              </div>
+
+              <div className="log-body">
+                <h3>{certification.title}</h3>
+                <p className="log-issuer">{certification.issuer}</p>
+                <p>{certification.description}</p>
+
+                <ul className="chips">
+                  {certification.skills.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                  ))}
+                </ul>
+
+                <a
+                  href={certification.certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-link"
+                >
+                  View certificate ↗
+                </a>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }
