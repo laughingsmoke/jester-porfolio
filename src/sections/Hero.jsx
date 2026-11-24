@@ -3,7 +3,7 @@ import { profile, resumeUrl } from "../data/profile";
 const stats = [
   { value: "4", accent: "", label: "Live projects" },
   { value: "4", accent: "", label: "Certifications" },
-  { value: "Full", accent: "-stack", label: "React · PHP · MySQL" },
+  { value: "Full", accent: "-stack", label: "React · PHP · SQL" },
   { value: "PH", accent: ".", label: "Surigao City" },
 ];
 
@@ -25,9 +25,9 @@ function Hero() {
         <p className="hero-description">
           I'm <strong>{profile.name}</strong>, a {profile.role.toLowerCase()}{" "}
           who ships production systems end to end, from{" "}
-          <strong>React interfaces</strong> to <strong>PHP &amp; MySQL</strong>{" "}
-          backends. My work is live and in daily use across government,
-          healthcare, and local business.
+          <strong>React interfaces</strong> to{" "}
+          <strong>PHP and SQL backends</strong>. I'm currently building{" "}
+          <strong>Health Made Easy</strong> at Cercan Tech Digital Platforms.
         </p>
 
         <div className="hero-actions">

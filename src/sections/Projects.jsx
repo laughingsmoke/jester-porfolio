@@ -22,13 +22,13 @@ const projects = [
     type: "Mobile App + Landing Page",
     category: "Clinic Booking & Queueing",
     description:
-      "An Android clinic booking app that lets patients book sessions, check in with a QR code, and follow their place in the queue live, with a companion staff app for doctors and secretaries to run sessions and call the next patient.",
-    tech: ["Android", "QR Check-in", "Live Queue", "Messaging"],
+      "A clinic booking app where patients book sessions, check in with a QR code, and follow their place in the queue live. I develop it across the full stack at Cercan Tech: UI components, back-end logic, and database structure.",
+    tech: ["React", "JavaScript", "Android", "QR Check-in", "Live Queue"],
     url: "https://health-made-easy.com/",
     domain: "health-made-easy.com",
     image: hmeImage,
     imageSize: [1600, 830],
-    role: "Developer",
+    role: "Full-Stack Developer",
   },
   {
     name: "Craftique",
@@ -46,15 +46,15 @@ const projects = [
   {
     name: "PESDO",
     type: "Web Application",
-    category: "Public Employment System",
+    category: "Job Matching Portal · Capstone",
     description:
-      "A web-based employment platform designed to help jobseekers, employers, and PESDO staff manage job opportunities, referrals, and employment information in one centralized system.",
-    tech: ["React", "JavaScript", "PHP", "MySQL", "SMS"],
+      "A job matching portal that replaced paper-based processes at the Surigao City Public Employment Service Office, with role-based dashboards, automated job matching, and real-time SMS and email notifications.",
+    tech: ["React", "Vite", "Supabase", "PostgreSQL", "TextBee SMS", "Brevo"],
     url: "https://www.pesdosurigao.online/",
     domain: "pesdosurigao.online",
     image: pesdoImage,
     imageSize: [1600, 828],
-    role: "Developer",
+    role: "Developer & Researcher",
   },
 ];
 

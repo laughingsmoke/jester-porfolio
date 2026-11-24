@@ -3,24 +3,24 @@ const stack = [
     title: "Frontend",
     description:
       "Responsive, user-focused interfaces with clean, maintainable code.",
-    tools: ["React", "JavaScript", "HTML", "CSS"],
+    tools: ["React", "Vite", "JavaScript", "HTML", "CSS"],
   },
   {
-    title: "Backend",
+    title: "Backend & APIs",
     description:
-      "Application logic, APIs, authentication, and server-side systems.",
-    tools: ["PHP", "Node.js", "REST APIs", "SMS Integration"],
+      "Application logic, REST APIs, and SMS and email integrations.",
+    tools: ["PHP", "Node.js", "Express", "REST APIs", "TextBee SMS", "Brevo"],
   },
   {
     title: "Database",
     description:
       "Structured schemas that store, manage, and retrieve data efficiently.",
-    tools: ["MySQL", "SQL", "Cloud SQL", "Database Design"],
+    tools: ["MySQL", "PostgreSQL", "Supabase", "MongoDB", "Database Design"],
   },
   {
-    title: "Tools & Deployment",
-    description: "Modern workflows to build, test, deploy, and maintain apps.",
-    tools: ["Git", "GitHub", "VS Code", "Google Cloud", "Vercel"],
+    title: "Cloud & Tools",
+    description: "Workflows and hosting to build, deploy, and maintain apps.",
+    tools: ["Git", "GitHub", "Vercel", "Huawei Cloud", "Namecheap"],
   },
 ];
 
